@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // linear, goes from 1 to 4 
+        // does not circle
+        // edited it by mistake
+        var i = 0;
+        function increment(e){
+            console.log(e);
+            i++;
+            if(i == 3){
+                document.getElementsByTagName("button")[1].style.display = "none";   
+            }
+            document.getElementsByTagName("button")[0].style.display = "inline-block";
+            document.getElementsByTagName("img")[0].src = "images/dice" + (i+1) + ".png";
+            
+            
+        }
+        function decrement(e){
+            console.log(e);
+            var dice = document.getElementsByTagName("img")[0];
+            i--; 
+            if(i == 0){
+               document.getElementsByTagName("button")[0].style.display = "none";
+            }           
+            document.getElementsByTagName("button")[1].style.display = "inline-block";
+            dice.src = "images/dice" + (i+1) + ".png";                      
+        }
+
+    </script>
+</head>
+<body>
+    <button style = "display: none;">back</button>
+    <img src="images/dice1.png" alt="">
+    <button >forward</button>
+    <script>
+        back = document.getElementsByTagName("button")[0];
+        back.addEventListener("click", decrement);
+        front = document.getElementsByTagName("button")[1];
+        front.addEventListener("click", increment);
+        front.addEventListener("click", increment);
+    </script>
+</body>
+</html>

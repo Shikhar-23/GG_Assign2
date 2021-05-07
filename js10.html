@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="images/dice1.png" alt="">
+    <img src="images/dice3.png" alt="">
+    <img src="images/dice5.png" alt="">
+    <img src="images/dice6.png" alt="">
+    <script>
+        // 8 is a subset so just modified it further
+        for(let i = 0; i<3; i++){
+        let dice = document.getElementsByTagName("img")[i];
+        dice.addEventListener("mouseenter", function(event){        
+            dice.src = "images/dice" + (2*i+2) + ".png";
+        });
+        dice.addEventListener("mouseleave", function(event){        
+            dice.src = "images/dice" + (2*i + 1) + ".png";
+            });    
+        }
+        var image4  = document.getElementsByTagName("img")[3];
+        image4.addEventListener("mouseenter", function(event){        
+            for(let i = 0; i<3; i++){
+                let dice = document.getElementsByTagName("img")[i];                        
+                dice.src = "images/dice" + (2*i+2) + ".png";
+            }
+        });
+        image4.addEventListener("mouseleave", function(event){                    
+            for(let i = 0; i<3; i++){
+                let dice = document.getElementsByTagName("img")[i];                        
+                dice.src = "images/dice" + (2*i+1) + ".png";
+                }                   
+            });
+    
+    </script>
+    
+</body>
+</html>

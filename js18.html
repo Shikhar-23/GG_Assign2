@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button id = "open"> open </button>
+    <script>
+    var google;
+    console.log(screen.availWidth)
+    document.getElementById("open").addEventListener("click", function(){
+        var w = screen.width - 100;
+        var rx = Math.random()*w;
+        var h = screen.height - 100;
+        var ry = Math.random()*h;
+        window.open("", "hemlo", "left = 0, top = 0, width=100px, height=100px");
+        window.open("", "byee", "left = "+ w + ", top = 0, width=100px, height=100px");
+        window.open("", "bl", "left = 0, top = "+ h +", width=100px, height=100px");
+        window.open("", "br", "left = " + w + ", top = "+ h+", width=100px, height=100px");
+        window.open("", "center", "left = " + w/2 + ", top = "+ h/2 +", width=100px, height=100px");
+        window.open("", "random", "left = " + rx + ", top = "+  ry +", width=100px, height=100px");
+    });
+    </script>
+</body>
+</html>
